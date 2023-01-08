@@ -1,6 +1,6 @@
 ﻿using RequestSimulator.Application;
 using RequestSimulator.Application.Business;
-using RequestSimulator.Application.Business.Kafka;
+using RequestSimulator.Application.Business.Utils.Kafka;
 
 namespace RequestSimulator.API
 {
@@ -17,7 +17,6 @@ namespace RequestSimulator.API
         {
             services.AddRazorPages();
             services.ConfigureApplicationServicces(Configuration);
-
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

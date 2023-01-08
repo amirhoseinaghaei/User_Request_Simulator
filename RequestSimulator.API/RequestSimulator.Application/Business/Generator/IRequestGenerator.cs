@@ -4,6 +4,6 @@ namespace RequestSimulator.Application.Business.Generator
 {
     public interface IRequestGenerator
     {
-        public UserRequestDto GenerateApplicationRequest(int requestId, int edgeserverId, int dtId);
+        public UserRequestDto GenerateApplicationRequest(int requestId, int edgeserverId, int dtId, string edgeservername);
     }
 }

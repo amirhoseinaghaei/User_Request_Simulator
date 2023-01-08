@@ -1,12 +1,13 @@
 ﻿
 
+using RequestSimulator.Application.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RequestSimulator.Application.Business.Kafka
+namespace RequestSimulator.Application.Business.Utils.Kafka
 {
     public class KafkaSender : IKafkaSender
     {
@@ -14,9 +15,9 @@ namespace RequestSimulator.Application.Business.Kafka
         {
 
         }
-        public void SendToKafka()
+        public void SendToKafka(UserRequestDto? userRequestDto)
         {
-            Console.WriteLine("Sended");
+            System.Diagnostics.Debug.WriteLine("Amir");
         }
     }
 }

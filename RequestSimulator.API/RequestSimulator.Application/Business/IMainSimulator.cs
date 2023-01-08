@@ -2,8 +2,7 @@
 
 namespace RequestSimulator.Application.Business
 {
-    public interface IMainController
+    public interface IMainSimulator
     {
-        public void RequestGenerator();
     }
 }

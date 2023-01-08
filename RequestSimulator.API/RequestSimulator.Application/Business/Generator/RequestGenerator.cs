@@ -9,14 +9,28 @@ namespace RequestSimulator.Application.Business.Generator
 {
     public class RequestGenerator : IRequestGenerator
     {
-        public UserRequestDto GenerateApplicationRequest(int requestId, int edgeserverId, int dtId)
-        {
-            UserRequestDto userRequestDto = new UserRequestDto();
-            userRequestDto.EdgeServerId = edgeserverId;
-            userRequestDto.DigitalTwinId = dtId;
-            userRequestDto.Id = requestId;
+        Random Random;
+        private double arrivalRequestProb ;
 
-            return userRequestDto;
+        public RequestGenerator()
+        {
+            Random = new Random();
+            arrivalRequestProb = 0.4; 
+
+        }
+        public UserRequestDto GenerateApplicationRequest(int requestId, int edgeserverId, int dtId, string edgeservername)
+        {
+            if (Random.NextDouble() < arrivalRequestProb)
+            {
+                UserRequestDto userRequestDto = new UserRequestDto();
+                userRequestDto.EdgeServerId = edgeserverId;
+                userRequestDto.DigitalTwinId = dtId;
+                userRequestDto.Id = requestId;
+                userRequestDto.EdgeServerName = edgeservername;
+                return userRequestDto;
+
+            }
+            return null;
         }
     }
 }

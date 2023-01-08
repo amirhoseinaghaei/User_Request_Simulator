@@ -11,7 +11,7 @@ namespace RequestSimulator.Application.Dtos
     {
         public int DigitalTwinId { get; set; }
         public int EdgeServerId { get; set; }
-        public int EdgeServerName { get; set; }
+        public string EdgeServerName { get; set; }
 
     }
 }
