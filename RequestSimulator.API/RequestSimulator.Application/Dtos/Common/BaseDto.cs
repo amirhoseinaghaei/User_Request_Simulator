@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RequestSimulator.Application.Dtos.Common
 {
-    public abstract class BaseDto
+    public  class BaseDto
     {
        public int Id { get; set; }
     }

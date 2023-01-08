@@ -15,7 +15,7 @@ namespace RequestSimulator.Application.Business.Generator
         public RequestGenerator()
         {
             Random = new Random();
-            arrivalRequestProb = 0.4; 
+            arrivalRequestProb = 0.0005;
 
         }
         public UserRequestDto GenerateApplicationRequest(int requestId, int edgeserverId, int dtId, string edgeservername)
